@@ -29,7 +29,7 @@ module.exports = function (config) {
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
     preprocessors: {
       // 匹配源文件，并使用 webpack 进行预处理
-      'src/**/*.js': ['webpack'],
+      'src/**/*.js': ['webpack', 'coverage'],
       // 匹配测试文件，并使用 webpack 进行预处理
       'test/**/*.js': ['webpack']
     },
