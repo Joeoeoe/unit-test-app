@@ -15,8 +15,8 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/**/*.jsx',
-      'test/**/*.jsx'
+      'src/**/*.@(js|jsx)',
+      'test/**/*.@(js|jsx)'
     ],
 
 
@@ -29,9 +29,9 @@ module.exports = function (config) {
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
     preprocessors: {
       // 匹配源文件，并使用 webpack 进行预处理
-      'src/**/*.jsx': ['webpack', 'coverage'],
+      'src/**/*.@(js|jsx)': ['webpack', 'coverage'],
       // 匹配测试文件，并使用 webpack 进行预处理
-      'test/**/*.jsx': ['webpack']
+      'test/**/*.@(js|jsx)': ['webpack'],
     },
 
 

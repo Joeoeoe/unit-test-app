@@ -12,9 +12,8 @@ import App from '../src/App.jsx';
 //   
 /**
  * // TODO
- * 1.karma config解决
- * 2.为什么用React浏览器没有显示出内容？而原生DOM就有
- * 3.jest、jest-dom、jsdom关系
+ * 1.为什么用React浏览器没有显示出内容？而原生DOM就有
+ * 2.jest、jest-dom、jsdom关系
  */
 describe('react test', function () {
   it('render react', function () {
