@@ -15,8 +15,8 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/**/*.j(s|sx)',
-      'test/**/*.j(s|sx)'
+      'src/**/*.jsx',
+      'test/**/*.jsx'
     ],
 
 
@@ -29,9 +29,9 @@ module.exports = function (config) {
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
     preprocessors: {
       // 匹配源文件，并使用 webpack 进行预处理
-      'src/**/*.js': ['webpack', 'coverage'],
+      'src/**/*.jsx': ['webpack', 'coverage'],
       // 匹配测试文件，并使用 webpack 进行预处理
-      'test/**/*.js': ['webpack']
+      'test/**/*.jsx': ['webpack']
     },
 
 
@@ -88,7 +88,7 @@ module.exports = function (config) {
         rules: [
           {
             // 匹配 JavaScript 文件
-            test: /\.js$/,
+            test: /\.(js|jsx)$/,
             // 排除 node_modules 和 bower_components 目录
             exclude: /(node_modules|bower_components)/,
             use: {
