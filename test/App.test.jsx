@@ -13,7 +13,7 @@ import App from '../src/App.jsx';
 //   
 /**
  * // TODO
- * 1.为什么用React浏览器没有显示出内容？而原生DOM就有——> 使用ReactDom.render可以成功渲染，但是使用RTL就没办法？并且会带有很多其他代码，估计是不兼容Karma？
+ * 1.为什么用React浏览器没有显示出内容？而原生DOM就有——> 使用ReactDom.render可以成功渲染，但是使用RTL就没办法？并且会带有很多其他代码，代码把所有的script标签都打印了出来
  * 2.jest、jest-dom、jsdom关系
  */
 describe('react test', function () {
