@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { render, screen } from '@testing-library/react';
 import App from '../src/App.jsx';
+import { act } from 'react-dom/test-utils';
 
 // test('renders learn react link', () => {
 //   render(<App />);
@@ -13,7 +14,9 @@ import App from '../src/App.jsx';
 //   
 /**
  * // TODO
- * 1.为什么用React浏览器没有显示出内容？而原生DOM就有——> 使用ReactDom.render可以成功渲染，但是使用RTL就没办法？并且会带有很多其他代码，代码把所有的script标签都打印了出来；猜测：是不是RTL源码中act的原因？
+ * 1.为什么RTL不能渲染出内容，直接使用React就可以
+ * 2.附带的script代码是什么
+ * 3.是否要把css文件等也解析打包进去？有什么意义？优点：可以看见自动化测试过程；缺点：测试速度会变慢，会变慢多少？
  */
 describe('react test', function () {
   it('render react with RTL', function () {
