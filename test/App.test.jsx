@@ -1,15 +1,53 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { render, screen } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
 import App from '../src/App.jsx';
 import { act } from 'react-dom/test-utils';
+const mountedContainers = new Set()
+// 从RTL中抽取出来的render
+function renderCustom(
+  ui,
+  {
+    container,
+    baseElement = container,
+    queries,
+    hydrate = false,
+    wrapper: WrapperComponent,
+  } = {},
+) {
+  if (!baseElement) {
+    // default to document.body instead of documentElement to avoid output of potentially-large
+    // head elements (such as JSS style blocks) in debug output
+    baseElement = document.body
+  }
+  if (!container) {
+    container = baseElement.appendChild(document.createElement('div'))
+  }
+
+  // we'll add it to the mounted containers regardless of whether it's actually
+  // added to document.body so the cleanup method works regardless of whether
+  // they're passing us a custom container or not.
+  mountedContainers.add(container)
+
+  const wrapUiIfNeeded = innerElement =>
+    WrapperComponent
+      ? React.createElement(WrapperComponent, null, innerElement)
+      : innerElement
+
+  act(() => {
+    if (hydrate) {
+      ReactDOM.hydrate(wrapUiIfNeeded(ui), container)
+    } else {
+      ReactDOM.render(wrapUiIfNeeded(ui), container)
+    }
+  })
+}
 
 // test('renders learn react link', () => {
 //   render(<App />);
 //   const linkElement = screen.getByText(/learn react/i);
 //   expect(linkElement).toBeInTheDocument();
 // });
-
 
 //   
 /**
@@ -21,33 +59,8 @@ import { act } from 'react-dom/test-utils';
 describe('react test', function () {
   // TODO 从RTL中抽取出来的代码，为啥能渲染到浏览器中，而使用render方法则不行？？
   it('render react with RTL', function () {
-
-    let baseElement = null;
-    let container = null;
-    const hydrate = false;
-    const ui = <App />;
-
-
-    if (!baseElement) {
-      // default to document.body instead of documentElement to avoid output of potentially-large
-      // head elements (such as JSS style blocks) in debug output
-      baseElement = document.body
-    }
-    if (!container) {
-      container = baseElement.appendChild(document.createElement('div'))
-    }
-
-  
-    act(() => {
-      if (hydrate) {
-        ReactDOM.hydrate(ui, container)
-      } else {
-        ReactDOM.render(ui, container)
-      }
-    })
-
-    const div = document.body.appendChild(document.createElement('div'));
-    render(<p>123456</p>, { container: div });
+    renderCustom(<p>123456</p>);
+    render(<App />);
     screen.debug();
     // screen.getByText('hello world');
   })
