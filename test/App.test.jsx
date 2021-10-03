@@ -24,7 +24,9 @@ describe('react test', function () {
   // })
 
   it('render react with custom render', function () {
-    ReactDOM.render(<App />, document.body);
+    const div = document.createElement('div');
+    document.body.append(div);
+    ReactDOM.render(<App />, div);
     screen.debug();
   })
 })
