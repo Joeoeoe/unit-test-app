@@ -1,12 +1,11 @@
 import React from 'react';
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <button style={{ marginTop: 80 }} onClick={(e) => {
         const position = e.currentTarget.getBoundingClientRect();
-        console.log(position);
+        console.log(JSON.stringify(position));
       }}>
         click me
       </button>
