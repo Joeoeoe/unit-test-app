@@ -88,18 +88,19 @@ module.exports = function (config) {
         rules: [
           {
             // 匹配 JavaScript 文件
-            test: /\.(ts|tsx)$/,
+            test: /\.(js|jsx)$/,
             // 排除 node_modules 和 bower_components 目录
             exclude: /(node_modules|bower_components)/,
             use: [
               {
                 loader: 'babel-loader',
-              },{
-                loader:'ts-loader',
-                options:{
-                  configFile : './tsconfig.json'
-                }
-              }
+              },
+              // {
+              //   loader:'ts-loader',
+              //   options:{
+              //     configFile : './tsconfig.json'
+              //   }
+              // }
             ]
           }
         ]
