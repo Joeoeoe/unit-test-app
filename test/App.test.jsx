@@ -84,5 +84,6 @@ describe('react test', function () {
 
     // toBeInTheDocument是jest-dom的API，与jest集成，故在chai中无法使用
     // expect(btnElement).toBeInTheDocument();
+    expect(btnElement).to.exist;
   })
 })

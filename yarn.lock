@@ -3278,7 +3278,12 @@
   "resolved" "http://r.tnpm.oa.com/caseless/-/caseless-0.12.0.tgz"
   "version" "0.12.0"
 
-"chai@*", "chai@^4.3.4":
+"chai-dom@^1.10.0":
+  "integrity" "sha512-/FE0NvEGMXx1x1YQlc8ihLrEhH8JawflchuGe6ypIAX/4Zwmkr4cC3mfR9pDytbxsE/2LSm719TeU7VF/TCmtg=="
+  "resolved" "https://registry.npmjs.org/chai-dom/-/chai-dom-1.10.0.tgz"
+  "version" "1.10.0"
+
+"chai@*", "chai@^4.3.4", "chai@>= 3":
   "integrity" "sha512-yS5H68VYOCtN1cjfwumDSuzn/9c+yza4f3reKXlE5rUg7SFcCEy90gJvydNgOYtblyf4Zi6jIWRnXOgErta0KA=="
   "resolved" "http://r.tnpm.oa.com/chai/-/chai-4.3.4.tgz"
   "version" "4.3.4"
@@ -7775,7 +7780,7 @@
   "resolved" "http://r.tnpm.oa.com/mkdirp/-/mkdirp-1.0.4.tgz"
   "version" "1.0.4"
 
-"mocha@^9.1.2":
+"mocha@^9.1.2", "mocha@>= 2":
   "integrity" "sha512-ta3LtJ+63RIBP03VBjMGtSqbe6cWXRejF9SyM9Zyli1CKZJZ+vfCTj3oW24V7wAphMJdpOFLoMI3hjJ1LWbs0w=="
   "resolved" "http://r.tnpm.oa.com/mocha/-/mocha-9.1.2.tgz"
   "version" "9.1.2"

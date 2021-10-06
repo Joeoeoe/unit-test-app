@@ -48,6 +48,7 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.3.4",
+    "chai-dom": "^1.10.0",
     "karma": "^6.3.4",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.1.0",
