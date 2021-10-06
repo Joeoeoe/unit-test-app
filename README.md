@@ -50,3 +50,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 React支持——>TS支持
 
 似乎可以直接使用React testing library？
+
+# 配置完成后与RTL + Jest不兼容的点
+* 无法使用jest-dom的API(如toBeInTheDocument)
+* 断言需要修改(expect等)
+* 测试框架代码估计小改(describe等)
