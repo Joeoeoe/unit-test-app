@@ -51,7 +51,7 @@ React支持——>TS支持
 
 似乎可以直接使用React testing library？
 
-# 配置完成后与RTL + Jest不兼容的点
-* 无法使用jest-dom的API(如toBeInTheDocument)
-* 断言需要修改(expect等)
-* 测试框架代码估计小改(describe等)
+# Karma与Jest不兼容的点
+* 无法使用jest-dom的API(如toBeInTheDocument)——>解决：使用chai-dom替代，代码需要修改
+* 断言需要修改(expect等)——>解决：修改即可
+* 测试框架代码估计小改(describe等)——>解决：修改即可
