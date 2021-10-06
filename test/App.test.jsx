@@ -81,5 +81,8 @@ describe('react test', function () {
      * karma中成功返回正确位置(注意排除CSS干扰，后续看情况是否要在karma环境中注入css文件)
      */
     userEvent.click(btnElement);
+
+    // toBeInTheDocument是jest-dom的API，与jest集成，故在chai中无法使用
+    // expect(btnElement).toBeInTheDocument();
   })
 })
