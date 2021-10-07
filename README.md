@@ -55,3 +55,10 @@ React支持——>TS支持
 * 无法使用jest-dom的API(如toBeInTheDocument)——>解决：使用chai-dom替代，代码需要修改
 * 断言需要修改(expect等)——>解决：修改即可
 * 测试框架代码估计小改(describe等)——>解决：修改即可
+
+
+# 不着急解决的疑问
+* RTL的devDependencies依赖了jest-dom，用来进行库本身的单元测试；是否会一起安装jest对应的@types文件？是否会导致mocha、chai的@type混乱，会的话需要如何解决？（还是仅仅CRA创建的项目有这个问题）
+* 附带的script代码是什么
+* 是否要把css文件等也解析打包进去？有什么意义？优点：可以看见自动化测试过程；缺点：测试速度会变慢，会变慢多少？
+* 为什么RTL不能渲染出内容，直接使用React就可以
