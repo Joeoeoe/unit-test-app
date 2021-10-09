@@ -15,8 +15,9 @@ describe('react test', function () {
     const btnElement = screen.getByText(/click me/i);
     /**
      * 点击后在jsdom环境中返回：{ bottom: 0, height: 0, left: 0, right: 0, top: 0, width: 0 }
-     * 在真实浏览器环境中应该是：{"x":8,"y":88,"width":64.140625,"height":21,"top":88,"right":72.140625,"bottom":109,"left":8}
-     * karma中成功返回正确位置(注意排除CSS干扰，后续看情况是否要在karma环境中注入css文件)
+     * 在真实浏览器环境中应该是：{"x":108,"y":88,"width":64.140625,"height":21,"top":88,"right":172.140625,"bottom":109,"left":108}
+     * 
+     * 目前CSS样式也已经成功注入
      */
     userEvent.click(btnElement);
 

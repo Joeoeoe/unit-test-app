@@ -88,7 +88,6 @@ module.exports = function (config) {
       module: {
         rules: [
           {
-            // 匹配 JavaScript 文件
             test: /\.(ts|tsx|js|jsx)$/,
             // 排除 node_modules 和 bower_components 目录
             exclude: /(node_modules|bower_components)/,
@@ -97,6 +96,46 @@ module.exports = function (config) {
                 loader: 'babel-loader',
               }
             ]
+          },
+          {
+            test: /\.(le|c)ss$/,
+            exclude: /(node_modules|bower_components)/,
+            oneOf: [
+              {
+                // module.css启用css modules
+                test: /\.module\.(le|c)ss/,
+                use: [
+                  {
+                    loader: 'style-loader',
+                  },
+                  {
+                    loader: 'css-loader',
+                    options: {
+                      modules: {
+                        // css modules 启用
+                        localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                      },
+                    },
+                  },
+                  {
+                    loader: 'less-loader',
+                  }
+                ],
+              },
+              {
+                use: [
+                  {
+                    loader: 'style-loader',
+                  },
+                  {
+                    loader: 'css-loader',
+                  },
+                  {
+                    loader: 'less-loader',
+                  }
+                ],
+              },
+            ],
           }
         ]
       },
