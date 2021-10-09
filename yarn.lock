@@ -105,7 +105,7 @@
     "browserslist" "^4.16.6"
     "semver" "^6.3.0"
 
-"@babel/helper-create-class-features-plugin@^7.12.1", "@babel/helper-create-class-features-plugin@^7.12.17", "@babel/helper-create-class-features-plugin@^7.14.5", "@babel/helper-create-class-features-plugin@^7.15.4":
+"@babel/helper-create-class-features-plugin@^7.12.1", "@babel/helper-create-class-features-plugin@^7.14.5", "@babel/helper-create-class-features-plugin@^7.15.4":
   "integrity" "sha512-7ZmzFi+DwJx6A7mHRwbuucEYpyBwmh2Ca0RvI6z2+WLZYCqV0JOaLb+u0zbtmDicebgKBZgqbYfLaKNqSgv5Pw=="
   "resolved" "http://r.tnpm.oa.com/@babel%2fhelper-create-class-features-plugin/-/helper-create-class-features-plugin-7.15.4.tgz"
   "version" "7.15.4"
@@ -604,12 +604,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/plugin-syntax-typescript@^7.12.13":
-  "integrity" "sha512-cHP3u1JiUiG2LFDKbXnwVad81GvfyIOmCD6HIEId6ojrY0Drfy2q1jw7BwN7dE84+kTnBjLkXoL3IEy/3JPu2w=="
-  "resolved" "http://r.tnpm.oa.com/@babel%2fplugin-syntax-typescript/-/plugin-syntax-typescript-7.12.13.tgz"
-  "version" "7.12.13"
+"@babel/plugin-syntax-typescript@^7.14.5":
+  "integrity" "sha512-u6OXzDaIXjEstBRRoBCQ/uKQKlbuaeE5in0RvWdA4pN6AhqxTIwUsnHPU1CFZA/amYObMsuWhYfRl3Ch90HD0Q=="
+  "resolved" "https://registry.npmjs.org/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.14.5.tgz"
+  "version" "7.14.5"
   dependencies:
-    "@babel/helper-plugin-utils" "^7.12.13"
+    "@babel/helper-plugin-utils" "^7.14.5"
 
 "@babel/plugin-transform-arrow-functions@^7.12.1", "@babel/plugin-transform-arrow-functions@^7.14.5":
   "integrity" "sha512-KOnO0l4+tD5IfOdi4x8C1XmEIRWUjNRV8wc6K2vz/3e8yAOoZZvsRXRRIF/yo/MAOFb4QjtAw9xSxMXbSMRy8A=="
@@ -923,14 +923,14 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/plugin-transform-typescript@^7.12.1":
-  "integrity" "sha512-1bIYwnhRoetxkFonuZRtDZPFEjl1l5r+3ITkxLC3mlMaFja+GQFo94b/WHEPjqWLU9Bc+W4oFZbvCGe9eYMu1g=="
-  "resolved" "http://r.tnpm.oa.com/@babel%2fplugin-transform-typescript/-/plugin-transform-typescript-7.12.17.tgz"
-  "version" "7.12.17"
+"@babel/plugin-transform-typescript@^7.12.1", "@babel/plugin-transform-typescript@^7.15.0":
+  "integrity" "sha512-ZXIkJpbaf6/EsmjeTbiJN/yMxWPFWvlr7sEG1P95Xb4S4IBcrf2n7s/fItIhsAmOf8oSh3VJPDppO6ExfAfKRQ=="
+  "resolved" "https://registry.npmjs.org/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.15.8.tgz"
+  "version" "7.15.8"
   dependencies:
-    "@babel/helper-create-class-features-plugin" "^7.12.17"
-    "@babel/helper-plugin-utils" "^7.12.13"
-    "@babel/plugin-syntax-typescript" "^7.12.13"
+    "@babel/helper-create-class-features-plugin" "^7.15.4"
+    "@babel/helper-plugin-utils" "^7.14.5"
+    "@babel/plugin-syntax-typescript" "^7.14.5"
 
 "@babel/plugin-transform-unicode-escapes@^7.12.1", "@babel/plugin-transform-unicode-escapes@^7.14.5":
   "integrity" "sha512-crTo4jATEOjxj7bt9lbYXcBAM3LZaUrbP2uUdxb6WIorLmjNKSpHfIybgY4B8SRpbf8tEVIWH3Vtm7ayCrKocA=="
@@ -1133,6 +1133,15 @@
     "@babel/plugin-transform-react-jsx-self" "^7.12.1"
     "@babel/plugin-transform-react-jsx-source" "^7.12.1"
     "@babel/plugin-transform-react-pure-annotations" "^7.12.1"
+
+"@babel/preset-typescript@^7.15.0":
+  "integrity" "sha512-lt0Y/8V3y06Wq/8H/u0WakrqciZ7Fz7mwPDHWUJAXlABL5hiUG42BNlRXiELNjeWjO5rWmnNKlx+yzJvxezHow=="
+  "resolved" "https://registry.npmjs.org/@babel/preset-typescript/-/preset-typescript-7.15.0.tgz"
+  "version" "7.15.0"
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.14.5"
+    "@babel/helper-validator-option" "^7.14.5"
+    "@babel/plugin-transform-typescript" "^7.15.0"
 
 "@babel/preset-typescript@7.12.1":
   "integrity" "sha512-hNK/DhmoJPsksdHuI/RVrcEws7GN5eamhi28JkO52MqIxU8Z0QpmiSOQxZHWOHV7I3P4UjHV97ay4TcamMA6Kw=="

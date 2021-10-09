@@ -15,13 +15,14 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/**/*.@(js|jsx)',
-      'test/**/*.@(js|jsx)'
+      'src/**/*.@(ts|tsx)',
+      'test/**/*.@(ts|tsx)'
     ],
 
 
     // list of files / patterns to exclude
     exclude: [
+      'src/index.tsx'
     ],
 
 
@@ -29,9 +30,9 @@ module.exports = function (config) {
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
     preprocessors: {
       // 匹配源文件，并使用 webpack 进行预处理
-      'src/**/*.@(js|jsx)': ['webpack', 'coverage'],
+      'src/**/*.@(ts|tsx)': ['webpack', 'coverage'],
       // 匹配测试文件，并使用 webpack 进行预处理
-      'test/**/*.@(js|jsx)': ['webpack'],
+      'test/**/*.@(ts|tsx)': ['webpack'],
     },
 
 
@@ -88,22 +89,20 @@ module.exports = function (config) {
         rules: [
           {
             // 匹配 JavaScript 文件
-            test: /\.(js|jsx)$/,
+            test: /\.(ts|tsx|js|jsx)$/,
             // 排除 node_modules 和 bower_components 目录
             exclude: /(node_modules|bower_components)/,
             use: [
               {
                 loader: 'babel-loader',
-              },
-              // {
-              //   loader:'ts-loader',
-              //   options:{
-              //     configFile : './tsconfig.json'
-              //   }
-              // }
+              }
             ]
           }
         ]
+      },
+      resolve: {
+        // 支持缩写
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       }
     }
   })
