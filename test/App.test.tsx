@@ -4,13 +4,8 @@ import App from '../src/App';
 import userEvent from '@testing-library/user-event';
 
 describe('react test', function () {
-
-
   it('browser API in jsdom', () => {
     render(<App />);
-    // const div = document.createElement('div');
-    // document.body.append(div);
-    // ReactDOM.render(<App />, div);
 
     const btnElement = screen.getByText(/click me/i);
     /**
