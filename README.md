@@ -63,5 +63,10 @@ React支持——>TS支持
 * 是否要把css文件等也解析打包进去？有什么意义？✅ 保证浏览器显示的正确，已注入成功
 * 为什么RTL不能渲染出内容，直接使用React就可以
 
-# TODO
-* chai-dom与sinon-chai需要添加use前置脚本
+# 里程碑
+## v1: 2021.10.10
+* test runner: karma
+* testing framework: mocha
+* assertion library: chai
+* testing plugin: sinon, sinon-chai
+* UI测试库: chai-dom, @testing-library/react, @testing-library/user-event
