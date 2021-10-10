@@ -3319,12 +3319,12 @@
   "resolved" "http://r.tnpm.oa.com/caseless/-/caseless-0.12.0.tgz"
   "version" "0.12.0"
 
-"chai-dom@^1.10.0":
+"chai-dom@*", "chai-dom@^1.10.0":
   "integrity" "sha512-/FE0NvEGMXx1x1YQlc8ihLrEhH8JawflchuGe6ypIAX/4Zwmkr4cC3mfR9pDytbxsE/2LSm719TeU7VF/TCmtg=="
   "resolved" "https://registry.npmjs.org/chai-dom/-/chai-dom-1.10.0.tgz"
   "version" "1.10.0"
 
-"chai@*", "chai@^4.0.0", "chai@^4.3.4", "chai@>= 3":
+"chai@*", "chai@^4.0.0", "chai@^4.3.4", "chai@>= 3", "chai@>=3.5.0":
   "integrity" "sha512-yS5H68VYOCtN1cjfwumDSuzn/9c+yza4f3reKXlE5rUg7SFcCEy90gJvydNgOYtblyf4Zi6jIWRnXOgErta0KA=="
   "resolved" "http://r.tnpm.oa.com/chai/-/chai-4.3.4.tgz"
   "version" "4.3.4"
@@ -7211,6 +7211,13 @@
   "resolved" "http://r.tnpm.oa.com/just-extend/-/just-extend-4.2.1.tgz"
   "version" "4.2.1"
 
+"karma-chai-dom@^1.1.0":
+  "integrity" "sha1-GzZRSCLLtfp0nQB9525CIa40z6Q="
+  "resolved" "https://registry.npmjs.org/karma-chai-dom/-/karma-chai-dom-1.1.0.tgz"
+  "version" "1.1.0"
+  dependencies:
+    "chai-dom" "*"
+
 "karma-chai@^0.1.0":
   "integrity" "sha1-vuWtQEAFF4Ea40u5RfdikJEIt5o="
   "resolved" "http://r.tnpm.oa.com/karma-chai/-/karma-chai-0.1.0.tgz"
@@ -7241,6 +7248,11 @@
   "version" "2.0.1"
   dependencies:
     "minimist" "^1.2.3"
+
+"karma-sinon-chai@^2.0.2":
+  "integrity" "sha512-SDgh6V0CUd+7ruL1d3yG6lFzmJNGRNQuEuCYXLaorruNP9nwQfA7hpsp4clx4CbOo5Gsajh3qUOT7CrVStUKMw=="
+  "resolved" "https://registry.npmjs.org/karma-sinon-chai/-/karma-sinon-chai-2.0.2.tgz"
+  "version" "2.0.2"
 
 "karma-sinon@^1.0.5":
   "integrity" "sha1-TjRD8oMP3s/2JNN0cWPxIX2qKpo="
@@ -10745,12 +10757,12 @@
   dependencies:
     "is-arrayish" "^0.3.1"
 
-"sinon-chai@^3.7.0":
+"sinon-chai@^3.7.0", "sinon-chai@>=2.9.0":
   "integrity" "sha512-mf5NURdUaSdnatJx3uhoBOrY9dtL19fiOtAdT1Azxg3+lNJFiuN0uzaU3xX1LeAfL17kHQhTAJgpsfhbMJMY2g=="
   "resolved" "http://r.tnpm.oa.com/sinon-chai/-/sinon-chai-3.7.0.tgz"
   "version" "3.7.0"
 
-"sinon@*", "sinon@^11.1.2", "sinon@>=4.0.0":
+"sinon@*", "sinon@^11.1.2", "sinon@>=2.1.0", "sinon@>=4.0.0":
   "integrity" "sha512-59237HChms4kg7/sXhiRcUzdSkKuydDeTiamT/jesUVHshBgL8XAmhgFo0GfK6RruMDM/iRSij1EybmMog9cJw=="
   "resolved" "http://r.tnpm.oa.com/sinon/-/sinon-11.1.2.tgz"
   "version" "11.1.2"

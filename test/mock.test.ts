@@ -1,7 +1,3 @@
-import sinon from "sinon";
-import sinonChai from "sinon-chai";
-chai.use(sinonChai);
-
 function once(fn) {
     var returnValue,
         called = false;
